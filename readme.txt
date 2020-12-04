@@ -1,3 +1,4 @@
+
 RANDOM PASSWORD GENERATOR PROGRAM ALGORITHM
 
 #1 new password or saved password
