@@ -5,14 +5,9 @@ def clear():
 	if name == 'nt':
 		_ = system('cls')
 clear()
-print('''\nHEllO DEAR
-What Do You Want To Do
-1. Generate New Password
-2. SAVED PASSWORDS
-''')
+print('\nHEllO DEAR\nWhat Do You Want To Do\n1. Generate New Password\n2. SAVED PASSWORDS\n')
 usr_input_1= input('\n==>Enter Your Choice :')
 clear()
-string.result =''
 if usr_input_1=='1':
     usr_input_1_1=input('\n==Enter Length For Your Password==\n\n==>acceptable inputs are : 6,7,8,9,10 : ')
     def get_random_string(usr_input_1_1):
@@ -37,10 +32,7 @@ if usr_input_1=='1':
         print('\nThank You\nYour Input Is '+'"'+ usr_input_1_1 + '"' +"\nYour Generated Password Is : ",string.result)
     else:
         print('\n===> SORRY INVALID INPUT <===\n====> TRY AGAIN PLEASE <====\n')
-
-
 elif usr_input_1=='2':
     print('COMMING SOON')
 else:
-    print('\n===> SORRY INVALID INPUT <===\n')
-    print('====> TRY AGAIN PLEASE <====\n')
+    print('\n===> SORRY INVALID INPUT <===\n====> TRY AGAIN PLEASE <====\n')
