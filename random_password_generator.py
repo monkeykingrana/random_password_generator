@@ -5,10 +5,10 @@ usr_input_1= input('==>Enter Your Choice :')
 
 
 
-
+string.result =''
 if usr_input_1=='1':
     usr_input_1_1=input('==Enter Length For Your Password==\n\n==>acceptable inputs are : 6,7,8,9,10 : ')
-
+    len=usr_input_1_1
     def get_random_string(len):
 
         random_source = string.ascii_letters + string.digits
@@ -16,11 +16,12 @@ if usr_input_1=='1':
         password += random.choice(string.ascii_uppercase)
         password += random.choice(string.digits)
         password += random.choice(string.punctuation)
-        result = ''.join((random.choice(sample_puntuations) for i in range (usr_input_1_1)))
-        get_random_string(usr_input_1_1)
+        string.result = ''.join((random.choice(password) for i in range (len)))
+
     if usr_input_1_1=='6':
         print('Thank You\nYour Input Is "6"')
-        print("Your Generated Password Is : ",result)
+        get_random_string()
+        print("Your Generated Password Is : ",string.result)
 
     elif usr_input_1_1=='7':
         print('Thank You\nYour Input Is "7"')
