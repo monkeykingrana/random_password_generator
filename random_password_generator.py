@@ -5,21 +5,33 @@ def clear():
 	if name == 'nt':
 		_ = system('cls')
 clear()
-from datetime import datetime, date
-now,date = datetime.now() ,date.today()
-now,date = now.strftime("%H:%M:%S"), date.strftime("%d/%m/%Y")
-print(date,now)
+def Time():
+	from datetime import datetime, date
+	now,date = datetime.now() ,date.today()
+	now,date = now.strftime("%H:%M:%S"), date.strftime("%d/%m/%Y")
+	print(date,now)
+Time()
 print('\nHEllO DEAR\nWhat Do You Want To Do\n1. Generate New Password\n2. SAVED PASSWORDS\n')
 usr_input_1= input('\n==>Enter Your Choice :')
 clear()
-print(date,now)
+Time()
 usr_input_web=input('\n==Enter Name Of Website For Which PASSWORDS Is To Be Generated : ')
 clear()
-print(date,now)
+Time()
 
-def filehandler(generated_password):
+def file_append(generated_password):
 	file=open('saved_password.txt', 'a')
-	file.write()
+	data='\n==>Date :  '+date+' | ==>Time :  '+now+'\n==>Website :  '+usr_input_web+' | ==>PASSWORD :  '+generated_password
+	file.write(data)
+	file.close()
+
+def file_read():
+	file2=open('saved_password.txt','r+')
+
+	for i in file2:
+		print(i)
+
+	file2.close()
 
 
 if usr_input_1=='1':
@@ -32,6 +44,7 @@ if usr_input_1=='1':
         password += random.choice(sample_puntuations)
         string.result = ''.join((random.choice(password) for i in range (usr_input_1_1)))
     get_random_string(int(usr_input_1_1))
+	file_append(string.result)
     clear() ,print(date,now)
 
     if usr_input_1_1=='6':
