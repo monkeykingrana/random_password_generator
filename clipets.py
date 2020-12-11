@@ -19,7 +19,7 @@ print(date,now)
 
 def file_append(generated_password):
 	file=open('saved_password.txt', 'a')
-	data='\n\n\n--------------------------\n\n==>Date :  '+date+' | ==>Time :  '+now+'\n==>Website :  '+usr_input_web+' | ==>PASSWORD :  '+generated_password+
+	data='\n\n==>Date :  '+date+' | ==>Time :  '+now+'\n==>Website :  '+usr_input_web+' | ==>PASSWORD :  '+generated_password+'\n\n-----------\n\n'
 	file.write(data)
 	file.close()
 
