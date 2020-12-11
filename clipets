@@ -1,0 +1,4 @@
+from datetime import datetime, date
+now,date = datetime.now() ,date.today()
+now,date = now.strftime("%H:%M:%S"), date.strftime("%d/%m/%Y")
+print(date,now)
