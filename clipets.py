@@ -44,6 +44,8 @@ if usr_input_1=='1':
         password += random.choice(sample_puntuations)
         string.result = ''.join((random.choice(password) for i in range (usr_input_1_1)))
     get_random_string(int(usr_input_1_1))
+    
+    file_append(string.result)
 
     clear() ,print(date,now)
 
@@ -64,4 +66,4 @@ elif usr_input_1=='2':
     file_read()
 else:
     print('\n===> SORRY INVALID INPUT <===\n====> TRY AGAIN PLEASE <====\n')
-file_append(string.result)
+
