@@ -61,7 +61,7 @@ if usr_input_1=='1':
     else:
         print('\n===> SORRY INVALID INPUT <===\n====> TRY AGAIN PLEASE <====\n')
 elif usr_input_1=='2':
-    print('COMMING SOON')
+    file_read()
 else:
     print('\n===> SORRY INVALID INPUT <===\n====> TRY AGAIN PLEASE <====\n')
 file_append(string.result)
